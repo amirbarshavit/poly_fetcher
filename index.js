@@ -5,10 +5,14 @@ const app = express();
 
 // Define a route to handle GET requests
 app.get('/', async (req, res) => {
-    console.log("Hi you")
-    const data = await polymarket.fetchData()
+    // Generate a random number between 0 and 1
+    const randomNumber = Math.random();
+
+    // Throw an error 20% of the time
+    
+    const data = await polymarket.fetchData();
     // Send the data as a JSON response
-    res.json(data);
+    res.json(data);``
 });
 
 // Start the server
